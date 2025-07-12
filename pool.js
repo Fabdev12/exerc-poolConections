@@ -1,7 +1,7 @@
 const {Pool} = require("pg")
 
 const pool = new Pool({
-    connectionString: "postgresql://postgres:901206@localhost:5432/eventos_exer"
+    connectionString: process.env.DATABASE_URL
 });
 
 async function query(queryString, params, callback){
